@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdalaty <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rami <rami@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 10:04:19 by sdalaty           #+#    #+#             */
-/*   Updated: 2024/06/15 10:55:08 by sdalaty          ###   ########.fr       */
+/*   Updated: 2024/12/26 00:47:18 by rami             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
-	{
-		while (*s)
-		{
-			write (fd, s, 1);
-			s++;
-		}
-	}
+	size_t	len;
+
+	len = ft_strlen(s);
+	(void)!write(fd, s, len);
 }
 /*int main() {
     char *message = "Hello, world!\n";
