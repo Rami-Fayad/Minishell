@@ -51,12 +51,12 @@ all: $(NAME) no_relink
 
 $(NAME): $(OBJS) | $(LIBFT)
 	@$(LOADING) "Linking objects to $@"
-	@$(CC) $^ $(LDFLAGS) -o $@ > /dev/null 2>&1
+	@$(CC) $^ $(LDFLAGS) -o $@ 
 	@$(SUCCESS) "Linked $(NAME) to $@"
 
 $(OBJ_DIR)/%.o: %.c $(HEADERS) | $(OBJ_DIR)
 	@$(LOADING) "Compiling $< to $@"
-	@$(CC) $(CFLAGS) -c $< -o $@ > /dev/null 2>&1
+	@$(CC) $(CFLAGS) -c $< -o $@ 
 	@$(SUCCESS) "Compiled $< to $@"
 
 $(OBJ_DIR):
