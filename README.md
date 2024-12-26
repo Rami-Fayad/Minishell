@@ -69,6 +69,11 @@ Minishell is a simple shell project implemented in C that replicates the functio
    ```bash
    git clone https://github.com/Rami-Fayad/Minishell.git
    ```
+   or
+   ```bash
+   git clone https://github.com/salmadalaty/Minishell.git
+   ```
+
 
 2. Navigate to the project directory:
 
